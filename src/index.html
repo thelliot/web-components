@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #131313;
+    }
+
+    .content {
+      background: #0e0e0e;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+
+  <script type="module" src="/build/web-components.esm.js"></script>
+  <script nomodule src="/build/web-components.js"></script>
+
+</head>
+<body>
+<section class="content">
+    <hue-slider max="290">
+      <c-emoji emoji="1" emoji-label="lol" classes=""></c-emoji>
+    </hue-slider>
+</section>
+
+<script>
+const hueSlider = document.querySelector('hue-slider');
+const emoji = document.querySelector('c-emoji');
+
+hueSlider.addEventListener('input', function(e) {
+  emoji.setAttribute('emoji', `${e.detail.value}`);
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+.hue-slider {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  padding: 2rem 2rem 0.75rem;
+  background: #0a0a0a;
+
+
+  &__output {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+  }
+}
